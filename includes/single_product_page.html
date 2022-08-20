@@ -1,34 +1,31 @@
 <div ng-controller="single_product_ctrl">
 	<div ng-include='"header.html"' ></div>
-  	<div style="margin-top: 10px;">
+  	<div class="mt10" >
 	    <div class="hsplit" style="border-bottom:solid #ccc 1px;">
 	        <div class="gallery col-lg-6 col-sm-6 col-md-6 col-xs-12" >
-              <div style="text-align: center; padding: 40px 50px;">
-                  <img style="height: 300px;" src="{{product_info.image}}" >
+              <div class="single_product_img_div" >
+                  <img  class="img_height" src="{{product_info.image}}" >
               </div>
 	      </div>
-	      <div style="box-sizing: border-box; padding: 40px 30px;" class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
-	        <div style="padding: 10px 0px; font-size: 22px;">
+	      <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 single_product_details_div">
+	        <div class="single_product_title" >
 	          {{product_info.title}} 
 	        </div>
 	        <div> 
-	        	(<span style="font-size: 15px; font-weight: 600; " >
+	        	(<span class="fs15 fw600">
 	        		{{product_info.category}}
 	        	</span>)
 	        </div>
-	        <div style="padding: 10px 0px; ">Rating:
-	          <!-- <span style="">  -->
-	            <span style="font-size: 18px; font-weight: 600; color:#111;"> {{product_info.rating.rate}}</span>
-	            <span style="font-size: 15px; font-weight: 600; color:#333; padding:15px 1px"> ({{product_info.rating.count}}) ratings</span>
-
-	         <!--  </span> -->
+	        <div class="padding10_0" >Rating:
+	            <span class="fs18 fw600" style="color:#111;"> {{product_info.rating.rate}}</span>
+	            <span class="fs15 fw600rating_count" > ({{product_info.rating.count}}) ratings</span>
 	        </div>
-	        <div style="padding: 10px 0px; "> Price:
-	          <span style="font-size: 18px; font-weight: 600; color:#111;"> 
-	            <span style="font-size: 15px;">₹</span> {{product_info.price}}
+	        <div class="padding10_0" > Price:
+	          <span class="fs18 fw600" style="color:#111;"> 
+	            <span class="fs15" >₹</span> {{product_info.price}}
 	          </span>
 	        </div>
-	         <div style=" padding:10px 0px; word-spacing:3px; line-height:25px;">{{product_info.description}}</div>
+	         <div class="description">{{product_info.description}}</div>
 	      </div>
 	    </div>
   	</div>

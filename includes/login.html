@@ -1,51 +1,32 @@
-  <div style="padding:10px;" ng-controller="login_ctrl" >
-    <div style="">
-      <div style="text-align: center;margin-top: 15px;">
-        <div>
-          <img src="images/realpha_logo_and_name.png" >
-        </div>
-        <div style="font-size: 18px; font-weight: 600; color:#444; margin-top: 26px; letter-spacing: 2px; margin-bottom: 25px;"> Welcome, Please login in.</div>
-        <div style="padding-top: 5px; padding-bottom: 5px;">
-          <input type="text" placeholder="Email" style="" class="email_contact_input" ng-model="username">
-        </div>
-        <div style="padding-top: 7px; padding-bottom: 7px;">
-          <div class="password_div">
-            <input type="{{show_password_icon ? 'text' : 'password'}}" placeholder="Password" style="" class="password_contact_input" ng-model="password">
-            <span class="material-icons" style="font-size: 18px; color: #888; vertical-align: middle; cursor: pointer;" ng-click='password_hide_or_show()'>
-              {{ show_password_icon ?  "visibility" : "visibility_off" }}
-            </span>
-            <!-- <span class="material-icons" style="font-size: 18px; color: #888; vertical-align: middle; display: none;">
-              visibility_off
-            </span> -->
-          </div>
-        </div>
-        <div style="padding-top: 15px; padding-bottom: 15px; ">
-          <div style="width:438px;display: inline-block;" >
-            <div class="hsplit" >
-              <div style=" font-size: 14px;">
-                <input type="checkbox" name="" style="margin-right: 10px;cursor: pointer; "> Remember me
-              </div>
-              <div style="float: right;font-size:14px; padding-right: 5px;text-decoration: underline;margin-top: 2px; cursor: pointer;">
-                <a href="#!/forgot_password" style="text-decoration: none;">
-                  Forgot Password
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div style="padding-top: 10px; padding-bottom: 5px;">
-          <img src="https://i.gifer.com/ZZ5H.gif" style="width:15px; color:blue;margin: 2px;vertical-align: middle; " ng-if="is_login_disabled==true">
-          <button style="" class="login_button reable_background_color" ng-click=login() ng-disabled="is_login_disabled">Log in</button>
-        </div>
-        <div style="padding-top: 10px; padding-bottom: 5px; margin-top: 25px;">
-          <div style="font-size: 15px; color:#333;">
-            Don't have an account? 
-            <a href="#!/signup">sign up </a>
-            today.
-          </div>
-          
+  <div class="p10" style="" ng-controller="login_ctrl" >
+    <div style="text-align: center;margin-top: 150px;">
+      <div class="login_heading" > 
+        Welcome, Please login in.
+      </div>
+      <div class="email_input_layout">
+        <input type="text" placeholder="Email" style="" class="email_contact_input" ng-model="username">
+      </div>
+      <div class="password_input_layout" >
+        <div class="password_div">
+          <input type="{{show_password_icon ? 'text' : 'password'}}" placeholder="Password" style="" class="password_contact_input" ng-model="password">
+          <span class="material-icons password_show" style="" ng-click='password_hide_or_show()'>
+            {{ show_password_icon ?  "visibility" : "visibility_off" }}
+          </span>
         </div>
       </div>
-    </div>
+      <div style="padding-top: 15px; padding-bottom: 15px; width:438px;display: inline-block;">
+          <div class="hsplit" >
+            <div class="fs14" >
+              <input type="checkbox" name="" style="margin-right: 10px;cursor: pointer; "> Remember me
+            </div>
+            <div class="forgot_password" style="float: right;">
+                Forgot Password
+            </div>
+          </div>
+      </div>
+      <div style="padding-top: 10px; padding-bottom: 5px;">
+        <img src="https://i.gifer.com/ZZ5H.gif" style="width:15px; color:blue;margin: 2px;vertical-align: middle; " ng-if="is_login_disabled==true">
+        <button style="" class="login_button reable_background_color" ng-click=login() ng-disabled="is_login_disabled">Log in</button>
+      </div>
   </div>
+</div>

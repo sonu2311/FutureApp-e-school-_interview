@@ -18,9 +18,12 @@ div.hsplit > div {
 }
 
 .email_contact_input{
-	padding:15px 10px;border: none; outline: none;
-	 border-radius: 10px; width:420px; color:#333; 
-	 max-width: 100%; background-color: rgb(245,245,246); 
+	padding:15px 10px;border: none; 
+	outline: none;
+	border-radius: 10px; 
+	width:420px; color:#333; 
+	max-width: 100%; 
+	background-color: rgb(245,245,246); 
 }
 .email_contact_input:hover{
 	box-shadow: 1px 1px 2px 1px #ddd;
@@ -73,7 +76,36 @@ button:disabled {
 .extra_style{
 	font-size: 15px;text-align: left;
 }
-
+.login_heading{
+	font-size: 18px; 
+	font-weight: 600; 
+	color:#444; 
+	margin-top: 26px; 
+	letter-spacing: 2px; 
+	margin-bottom: 25px;
+}
+.email_input_layout{
+	padding-top: 5px; 
+	padding-bottom: 5px;
+}
+.fs14{
+	font-size: 14px;
+}
+.forgot_password{
+	font-size:14px; 
+	padding-right: 5px;
+	text-decoration: underline;
+	margin-top: 2px; cursor: pointer;
+}
+.password_input_layout{
+	padding-top: 7px; padding-bottom: 7px;
+}
+.password_show{
+	font-size: 18px; 
+	color: #888; 
+	vertical-align: middle; 
+	cursor: pointer;
+}
 .email_contact_input{
 	padding:15px 10px;border: none; 
 	outline: none; 
@@ -194,9 +226,51 @@ vertical-align: middle;height: 100%; display: inline-block;visibility: hidden;
 .mt8{
 	margin-top: 8px;
 }
+.mt10{
+	margin-top: 10px;
+}
+.error_img_div{
+	margin-top:100px; 
+	margin-left: 80px;
+}
+.single_product_img_div{
+	text-align: center; 
+	padding: 40px 50px;
+
+}
+.single_product_details_div{
+	box-sizing: border-box; 
+	padding: 40px 30px;
+}
+.single_product_title{
+	padding: 10px 0px; 
+	font-size: 22px;
+}
+.fw600{
+	font-weight: 600;
+}
+.rating_count{
+	color:#333; 
+	padding:15px 1px
+}
+.img_height{
+	height: 300px;
+}
+.error_img{
+	max-height:400px; 
+	max-width: 80%;
+}
 .title{
 	color: #333; 
 	font-weight:700;
+}
+.padding10_0{
+	padding: 10px 0px;
+}
+.description{
+	 padding:10px 0px; 
+	 word-spacing:3px; 
+	 line-height:25px;
 }
 .fs15{
 	font-size: 15px;
@@ -256,7 +330,9 @@ vertical-align: middle;height: 100%; display: inline-block;visibility: hidden;
 	background-color: #fff; 
 	color:#222;
 }
-
+.p10{
+	padding:10px;
+}
 
 
 
