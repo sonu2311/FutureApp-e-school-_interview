@@ -30,12 +30,19 @@ app.config(function($routeProvider) {
 });
 
 app.controller('products_ctrl', function($scope, $route, $http) {
+  $scope.self =$scope
   $scope.products_list=[]
-  $http.get('https://fakestoreapi.com/products')
+  $scope.sort_by = "asc"
+  $scope.limit = "20"
+
+  $scope.reload = function() {
+    $http.get('https://fakestoreapi.com/products?sort='+$scope.sort_by+'&limit='+$scope.limit)
     .then(function(backend_output){
       console.log("backend_output_of products==", backend_output)
       $scope.products_list =backend_output.data
     })
+  }  
+  $scope.reload()
 });
 
 app.controller('single_product_ctrl', function($scope, $route, $http) {
@@ -44,15 +51,8 @@ app.controller('single_product_ctrl', function($scope, $route, $http) {
   var url_params = new URLSearchParams(window.location.href.split("?")[1])
   $scope.url_product_id = url_params.get("id")
 
-  // $scope.dish_id = url_params.get("id")
-  // api($http, '/dish_according_to_id',{ "dish_id": $scope.dish_id },function(backend_output){
-  //   $scope.d=backend_output
-  //   console.log($scope.d)
-  // })
-
   $http.get('https://fakestoreapi.com/products/'+ $scope.url_product_id)
     .then(function(backend_output){
-      console.log("backend_output_product_info==", backend_output)
       $scope.product_info =backend_output.data
     })
 });
