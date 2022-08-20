@@ -1,5 +1,4 @@
 <div ng-controller="products_ctrl">
-	<!-- products_list={{products_list}} -->
 	<div ng-include='"header.html"' ></div>
 	<div class="hsplit" style=" ">
 		<div class="select_dropdown_div" style="float: right;" >
@@ -19,34 +18,32 @@
 	<div class="hsplit big_div"  ng-if="products_list.length>0">
 		<div ng-repeat="x in products_list" class="col-xs-12 col-sm-6 col-md-4 col-lg-3 box_sizing">
 			<div class="card" style="">
-				<a  href="#!/single_product_page?id={{x.id}}" style="text-decoration: none;">
+				<a href="#!/single_product_page?id={{x.id}}" style="text-decoration: none; color: inherit;">
 					<div class="image_div"  >
 						<img class="image" ng-src="{{x.image}}" >
 					</div>
-				</a>
-				<div  class="mt20" style="" >
-					<span class="title">
-						{{x.title}}
-					</span>
-					<span class="fs15" style="">({{x.category}})</span>
-					<div class="hsplit">
-						<div  class="mt15 mb10" >
-							<span class="fs15 rupee" >₹</span> {{x.price}}	
-						</div>
-						<div class="price mt15 products_rate" style=" float:right; ">
-							<span class="material-icons fs12">
-								star_rate
-							</span>
-							<span class="fs12">{{x.rating.rate}}</span>
+					<div class="mt20" style="" >
+						<span class="title">
+							{{x.title}}
+						</span>
+						<span class="fs15" style="">({{x.category}})</span>
+						<div class="hsplit">
+							<div  class="mt15 mb10" >
+								<span class="fs15 rupee" >₹</span> {{x.price}}	
+							</div>
+							<div class="price mt15 products_rate" style=" float:right; ">
+								<span class="material-icons fs12">
+									star_rate
+								</span>
+								<span class="fs12">{{x.rating.rate}}</span>
+							</div>
 						</div>
 					</div>
-
-				</div>
+				</a>
 			</div>
 		</div>
 	</div>
 	<div style="height: 100px;background-color:black; text-align:center; color:#fff"  >
-		<!-- <div style="">Futureapp e schools</div> -->
 	</div>
 	<div class="error_img_div" ng-if="products_list.length <= 0" >
 		<img class="error_img"  src="images/error_image.jpg">

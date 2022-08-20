@@ -8,15 +8,7 @@ app.config(function($routeProvider) {
     })
     .when("/", {
         templateUrl : "includes/dashboard.html",
-        subPage: "includes/search_page.html"
-    })
-    .when("/dashboard", {
-        templateUrl : "includes/dashboard.html",
-        subPage: "includes/search_page.html"
-    })
-    .when("/property_page", {
-        templateUrl : "includes/dashboard.html",
-        subPage : "includes/property_page.html"
+        subPage: "includes/products_page.html"
     })
     .when("/products_page", {
       templateUrl : "includes/dashboard.html",

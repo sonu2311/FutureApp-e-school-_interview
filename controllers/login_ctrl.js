@@ -22,7 +22,7 @@ app.controller('login_ctrl', function($scope, $http) {
     .then(function(backend_output){
       $scope.is_login_disabled=false
       console.log("backend_output==", backend_output)
-      localStorage.token = backend_output.token
+      localStorage.token = backend_output.data.token
       window.location.href = "#!/products_page"
     })
     .catch(function(e){

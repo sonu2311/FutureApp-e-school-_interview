@@ -69,8 +69,8 @@ button:disabled {
 @media (min-width: 992px) {
 	.main_div {
 		/*margin-left: 170px;*/
-		background-color: rgb(245,245,246);
-		height: calc(100vh - 55px);
+		/*background-color: rgb(245,245,246);*/
+		/*height: calc(100vh - 55px);*/
 	}
 }
 .extra_style{
@@ -174,7 +174,7 @@ button:disabled {
 .mb5{
 	margin-bottom: 5px;
 }
-.card{	
+.card{
 	margin:  auto;
 	height: 390px;
 	overflow: hidden;
@@ -186,8 +186,10 @@ button:disabled {
 	border-radius: 8px;
 	background-color:#fff;
 	padding: 10px;
-	width:350px;
+	/*width:350px;*/
 	margin-bottom:25px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
 .menu_icon{
 	color:#666; cursor: pointer;
