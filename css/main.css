@@ -462,6 +462,35 @@ div.hsplit > div {
 	color:#3a7f48;
 }
 
+.big_div{
+	/*text-align: center;*/
+	/*padding:5px;*/
+	margin-bottom: 10px;
+	box-sizing: border-box;
+}
+
+.border{
+	margin:10px;
+	/*padding:5px;*/
+	/*width:230px;*/
+	height: 360px;
+	border-radius: 3px;
+	text-align: center;
+	overflow: hidden;
+	cursor: pointer;
+	border:solid #ccc 1px; 
+	box-sizing: border-box;
+	position: relative;
+	box-shadow: 2px 3px 5px rgba(0, 0, 0, 0);
+}
+
+.border:hover {
+	box-shadow: 2px 3px 5px #888888;
+	/*border: #888888;*/
+}
+.box_sizing{
+	box-sizing: border-box;
+}
 
 
 
