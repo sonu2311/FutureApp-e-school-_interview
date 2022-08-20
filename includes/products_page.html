@@ -2,97 +2,47 @@
 	<!-- products_list={{products_list}} -->
 	<div ng-include='"header.html"' ></div>
 	<div class="hsplit" style=" ">
-		<div style="margin-top:15px; margin-right: 23px;float: right;" >
-			<select style=" outline: none; border-radius: 2px;background-color: rgb(10, 102, 194); padding:5px; cursor: pointer; font-size: 13px;color:#fff; border:solid rgb(10, 102, 194) 1px;" ng-model="self.sort_by" ng-change='reload()' >
-				<option style="cursor: pointer;background-color: #fff; color:#222;" value="SORT_BY_RELEVENCE">Sort By Relevence</option>
-				<option style="cursor: pointer;background-color: #fff; color:#222;" value="SORT_BY_PRICE_HIGH_TO_LOW">Price: High to Low</option>
-				<option style="cursor: pointer;background-color: #fff; color:#222;" value="SORT_BY_PRICE_LOW_TO_HIGH">Price: Low to High</option>
+		<div class="select_dropdown_div" style="float: right;" >
+			<select class="select_dropdown"  ng-model="self.sort_by" ng-change='reload()' >
+				<option class="select_options"  value="SORT_BY_RELEVENCE">Sort By Relevence</option>
+				<option class="select_options"  value="SORT_BY_PRICE_HIGH_TO_LOW">Price: High to Low</option>
+				<option class="select_options" value="SORT_BY_PRICE_LOW_TO_HIGH">Price: Low to High</option>
 			</select>
 		</div>
 	</div>
-
-	<div class="hsplit big_div" ng-if="products_list.length>0">
+	<div class="hsplit big_div"  ng-if="products_list.length>0">
 		<div ng-repeat="x in products_list" class="col-xs-12 col-sm-6 col-md-4 col-lg-3 box_sizing">
-			<div class="border" style="">
+			<div class="card" style="">
 				<a  href="#!/single_product_page?id={{x.id}}" style="text-decoration: none;">
-					<div style="height: 250px; text-align: center; overflow: hidden; vertical-align: middle; white-space: nowrap;" >
-						<span style="vertical-align: middle;height: 100%; display: inline-block;visibility: hidden;" ></span>
-						<img style="max-height: 250px; max-width: 100%; vertical-align: middle" ng-src="{{x.image}}" >
+					<div class="image_div"  >
+						<img class="image" ng-src="{{x.image}}" >
 					</div>
 				</a>
-				<div  class="product_detail_div " style="margin-top: 20px;" >
-					<div>
-						<img src="https://www.pngkey.com/png/detail/261-2619381_chitr-veg-symbol-svg-veg-and-non-veg.png" style="width:12px;" ng-if="x.veg_nonveg =='VEG'">
-						<img src="https://www.pngkey.com/png/detail/245-2459071_non-veg-icon-non-veg-symbol-png.png" style="width:12px;" ng-if="x.veg_nonveg =='NONVEG'">
-						<span style="color: #333; font-weight:700;margin-left: 2px;">{{x.title}}</span>
+				<div  class="mt20" style="" >
+					<span class="title">
+						{{x.title}}
+					</span>
+					<span class="fs15" style="">({{x.category}})</span>
+					<div class="hsplit">
+						<div  class="mt15 mb10" >
+							<span class="fs15 rupee" >₹</span> {{x.price}}	
+						</div>
+						<div class="price mt15 products_rate" style=" float:right; ">
+							<span class="material-icons fs12">
+								star_rate
+							</span>
+							<span class="fs12">{{x.rating.rate}}</span>
+						</div>
 					</div>
-					<div class="hsplit" style="">
-						<div  class="price_in_product_detail" >
-							<span style="font-size: 15px;">₹</span> {{x.price}}</div>
-						<div class=" add_cart" style="float:right;" ng-if='x.dish_quantity == 0' ng-click="add_dish_quantity(x)">Add To Cart</div>
 
-						<div class="hsplit add_remove_comman_div" style="float:right; " ng-if="x.dish_quantity > 0" >
-							<div >
-								<span class="material-icons add_remove_class margin_right_5" ng-click="remove_dish_quantity(x)" >
-								remove_circle_outline
-								</span>
-							</div>
-							<div class="add_number">
-								<span >{{x.dish_quantity}}</span>
-							</div>
-							<div >
-								<span class="material-icons add_remove_class margin_left_5" ng-click="add_dish_quantity(x)" >
-								add_circle_outline
-								</span>
-							</div>
-						</div>		
-					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-
-	<div style="height: 50px;" ng-if="list.length>0" ></div>
-	<hr ng-if="list.length>0">
-	<div class="hsplit" style=" box-sizing: border-box; margin-bottom: 10px; text-align: center;" ng-if="list.length>0">
-		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-1" style="box-sizing: border-box;"></div>
-		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-10" style=" padding-left: 0px; padding-right:0px;box-sizing: border-box; ">
-			<div style="  display: inline-block; " >
-				<a style="outline: none;"  href="all_dishes_page.html?search_key={{search_key}}&sort_by={{sort_by}}&menu_date={{menu_date}}&veg_nonveg={{veg_nonveg}}&page={{page-1}}">
-					<button class="pagination_previous_button" style="" ng-disabled="page==1">
-						<span class="material-icons" style="vertical-align: middle;font-size: 15px; color:#666;">
-							fast_rewind
-						</span>
-						previous
-					</button>
-				</a>
-			</div>
-			<div style="display: inline-block;">
-				<div style="display: inline-block;" ng-repeat='x in page_number_list'>
-					<div>
-						<a style="outline: none;"  href="all_dishes_page.html?search_key={{search_key}}&sort_by={{sort_by}}&menu_date={{menu_date}}&veg_nonveg={{veg_nonveg}}&page={{x.page}}" ng-if="x.page!=0"><button class="pagination_button" ng-style='{"background-color": x.page == page ? "rgb(10, 102, 194)": "#ddd","color":x.page == page ?"#fff":"#222"}'>{{x.page}}</button>
-						</a>
-					</div>
-					<div ng-if="x.page==0" style="margin: 1px;">...</div>
-				</div>
-			</div>
-			<div style="display: inline-block; margin-left:6px;" >
-				<a style="outline: none;"  href="all_dishes_page.html?search_key={{search_key}}&sort_by={{sort_by}}&menu_date={{menu_date}}&veg_nonveg={{veg_nonveg}}&page={{1+page}}">
-					<button style="border:solid #ccc 1px; outline:none; padding:2px 25px; border-radius: 2px; " ng-disabled="page>=page_count">
-						next
-						<span class="material-icons" style="vertical-align: middle;font-size: 15px;color:#666;">
-							fast_forward
-						</span>
-					</button>
-				</a>
-			</div>
-		</div>
-		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-1" style="box-sizing: border-box;"></div>
+	<div style="height: 100px;background-color:black; text-align:center; color:#fff"  >
+		<!-- <div style="">Futureapp e schools</div> -->
 	</div>
-	<hr ng-if="list.length>0">
-	<div style="height: 100px;" ng-if="list.length>0" ></div>
-
-	<div ng-if="list.length <= 0" style="margin-top:100px; margin-left: 80px;">
-		<img style='max-height:400px; max-width: 80%;' src="images/search_no_result.png">
+	<div ng-if="products_list.length <= 0" style="margin-top:100px; margin-left: 80px;">
+		<img style='max-height:400px; max-width: 80%;' src="images/error_image.jpg">
 	</div>
 </div>

@@ -33,7 +33,7 @@ app.controller('products_ctrl', function($scope, $route, $http) {
   $scope.products_list=[]
   $http.get('https://fakestoreapi.com/products')
     .then(function(backend_output){
-      console.log("backend_output==", backend_output)
+      console.log("backend_output_of products==", backend_output)
       $scope.products_list =backend_output.data
     })
 });

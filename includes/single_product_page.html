@@ -16,10 +16,16 @@
 	        		{{product_info.category}}
 	        	</span>)
 	        </div>
-	        <div style="padding: 10px 0px; "> Price:
-	          <span style="font-size: 18px; font-weight: 600; color:#444;"> 
-	            <span style="font-size: 15px;">₹</span> {{product_info.price}}
+	        <div style="padding: 10px 0px; ">Rating:
+	          <!-- <span style="">  -->
+	            <span style="font-size: 18px; font-weight: 600; color:#111;"> {{product_info.rating.rate}}</span>
+	            <span style="font-size: 15px; font-weight: 600; color:#333; padding:15px 1px"> ({{product_info.rating.count}}) ratings</span>
 
+	         <!--  </span> -->
+	        </div>
+	        <div style="padding: 10px 0px; "> Price:
+	          <span style="font-size: 18px; font-weight: 600; color:#111;"> 
+	            <span style="font-size: 15px;">₹</span> {{product_info.price}}
 	          </span>
 	        </div>
 	         <div style=" padding:10px 0px; word-spacing:3px; line-height:25px;">{{product_info.description}}</div>
