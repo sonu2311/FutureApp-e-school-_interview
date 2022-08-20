@@ -1,0 +1,52 @@
+body{
+  font-family: roboto;
+}
+div.hsplit:after {
+content: "";
+clear: both;
+display: table;
+}
+
+div.hsplit > div {
+  float: left;
+}
+.email_contact_input{
+  padding:15px 10px;border: none; outline: none; border-radius: 10px; width:420px; color:#333; max-width: 100%; background-color: rgb(245,245,246); 
+}
+.email_contact_input:hover{
+  box-shadow: 1px 1px 2px 1px #ddd;
+}
+
+.password_contact_input{
+   padding:15px 10px;
+  border: none; 
+  outline: none; border-radius: 10px; width:380px; color:#333; 
+  max-width: 100%; background-color: rgb(245,245,246); 
+}
+
+.password_div{
+   width:438px; display: inline-block; text-align: left; background-color: rgb(245,245,246);border-radius: 10px;
+}
+.password_div:hover{
+  box-shadow: 1px 1px 2px 1px #ddd;
+}
+.login_button{
+  padding:15px 10px;
+  border: none; outline: none; 
+  border-radius: 10px; 
+  width:438px; 
+  color:#fff; 
+  max-width: 100%;
+  font-size: 16px; 
+  font-weight: 600;
+  cursor: pointer;
+}
+.reable_background_color{
+  background-color: #3a7f48;
+}
+.reable_color{
+  color:#3a7f48;
+}
+button:disabled {
+  background: #ddd;
+}

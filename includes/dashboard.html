@@ -1,0 +1,16 @@
+<div ng-controller="dashboard_ctrl" >
+	<div class="hide-xs show-md"  >
+		<div style="position:fixed; top:0px; left: 0px; width: 100%; height: 55px; background-color: #fff; z-index: 3; " ng-include='"includes/header_desktop.html"' >
+			<!-- Big Screen Header. -->
+		</div>
+		<div style="height: 55px;" ></div>
+	</div>
+	<div class="show-xs hide-md"  >
+		<div style="position:fixed; top:0px; left: 0px; width: 100%; height: 50px; background-color:#fff; z-index: 30; " ng-include='"includes/header_mobile.html"' >
+			<!-- Small Screen Header. Small Screen Header. Small Screen Header. -->
+		</div>
+		<div style="height: 50px;" ></div>
+	</div>
+	<div class="main_div" ng-include="subPage" ></div>
+
+</div>
