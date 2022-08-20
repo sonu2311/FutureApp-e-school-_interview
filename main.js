@@ -44,6 +44,12 @@ app.controller('single_product_ctrl', function($scope, $route, $http) {
   var url_params = new URLSearchParams(window.location.href.split("?")[1])
   $scope.url_product_id = url_params.get("id")
 
+  // $scope.dish_id = url_params.get("id")
+  // api($http, '/dish_according_to_id',{ "dish_id": $scope.dish_id },function(backend_output){
+  //   $scope.d=backend_output
+  //   console.log($scope.d)
+  // })
+
   $http.get('https://fakestoreapi.com/products/'+ $scope.url_product_id)
     .then(function(backend_output){
       console.log("backend_output_product_info==", backend_output)

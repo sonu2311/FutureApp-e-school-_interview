@@ -1,5 +1,29 @@
 <div ng-controller="single_product_ctrl">
-	QGRttyryt jhkjhk
-	url_product_id={{url_product_id}}
-	product_info={{product_info}}
+	<div ng-include='"header.html"' ></div>
+  	<div style="margin-top: 10px;">
+	    <div class="hsplit" style="border-bottom:solid #ccc 1px;">
+	        <div class="gallery col-lg-6 col-sm-6 col-md-6 col-xs-12" >
+              <div style="text-align: center; padding: 40px 50px;">
+                  <img style="height: 300px;" src="{{product_info.image}}" >
+              </div>
+	      </div>
+	      <div style="box-sizing: border-box; padding: 40px 30px;" class="col-lg-6 col-sm-6 col-md-6 col-xs-12">
+	        <div style="padding: 10px 0px; font-size: 22px;">
+	          {{product_info.title}} 
+	        </div>
+	        <div> 
+	        	(<span style="font-size: 15px; font-weight: 600; " >
+	        		{{product_info.category}}
+	        	</span>)
+	        </div>
+	        <div style="padding: 10px 0px; "> Price:
+	          <span style="font-size: 18px; font-weight: 600; color:#444;"> 
+	            <span style="font-size: 15px;">₹</span> {{product_info.price}}
+
+	          </span>
+	        </div>
+	         <div style=" padding:10px 0px; word-spacing:3px; line-height:25px;">{{product_info.description}}</div>
+	      </div>
+	    </div>
+  	</div>
 </div>
