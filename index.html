@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html>
-
 <head>
 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 	<meta http-equiv="Pragma" content="no-cache">
 	<meta http-equiv="Expires" content="0">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto' >
-
 	<link rel="stylesheet" href="css/library.css">
 	<link rel="stylesheet" href="css/main.css">
 	<!-- TODO: Delete `signup.css` and `login.css` and put their css in main.css -->
 	<link rel="stylesheet" href="css/signup.css">
 	<link rel="stylesheet" href="css/login.css">
-
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-	<script src="common.js"></script>
+	<!-- <script src="common.js"></script> -->
 	<script src="main.js"></script>
 	<script src="controllers/login_ctrl.js"></script>
-
 </head>
 <body ng-app="myApp" ng-controller="main_ctrl">
 
 <div ng-view ></div>
-
-	<div style="position: fixed;bottom: 25px;right: 70px;border-radius: 3px;width:250px; color:#ccc; z-index: 2;">
-	    <div style="border:solid #ccc 1px;margin-bottom: 4px; margin-top: 4px; padding:20px 10px; border-radius: 3px;background-color: #333;color:#ccc; z-index: 2;" ng-repeat='x in messages'>
-	        {{x.message}}
-	    </div>
-	</div>
-
+<div style="position: fixed;bottom: 25px;right: 70px;border-radius: 3px;width:250px; color:#ccc; z-index: 2;">
+    <div style="border:solid #ccc 1px;margin-bottom: 4px; margin-top: 4px; padding:20px 10px; border-radius: 3px;background-color: #333;color:#ccc; z-index: 2;" ng-repeat='x in messages'>
+        {{x.message}}
+    </div>
+</div>
 </body>
 </html>

@@ -1,14 +1,13 @@
 <div ng-controller="products_ctrl">
-	<div ng-include='"header.html"' ></div>
-	<div class="hsplit" style=" ">
+	<div class="hsplit">
 		<div class="select_dropdown_div" style="float: right;" >
-			<select class="select_dropdown"  ng-model="self.sort_by" ng-change='reload()' >
-				<option class="select_options"  value="asc">Sort Asc</option>
-				<option class="select_options"  value="desc">Srot Desc</option>
+			<select class="select_dropdown"  ng-model="inputs.sort_by" ng-change='reload()' >
+				<option class="select_options" value="asc">Sort Asc</option>
+				<option class="select_options" value="desc">Srot Desc</option>
 			</select>
 		</div>
 		<div class="select_dropdown_div" style="float: right;" >
-			<select class="select_dropdown"  ng-model="self.limit" ng-change='reload()' >
+			<select class="select_dropdown"  ng-model="inputs.limit" ng-change='reload()' >
 				<option class="select_options"  value="5">Limit 5</option>
 				<option class="select_options"  value="10">Limit 10</option>
 				<option class="select_options"  value="20">Limit 20</option>

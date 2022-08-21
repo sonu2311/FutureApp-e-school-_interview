@@ -1,10 +1,9 @@
 <div ng-controller="single_product_ctrl">
-	<div ng-include='"header.html"' ></div>
   	<div class="mt10" >
 	    <div class="hsplit" style="border-bottom:solid #ccc 1px;">
 	        <div class="gallery col-lg-6 col-sm-6 col-md-6 col-xs-12" >
               <div class="single_product_img_div" >
-                  <img  class="img_height" src="{{product_info.image}}" >
+                <img  class="img_height" ng-src="{{product_info.image}}" >
               </div>
 	      </div>
 	      <div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 single_product_details_div">
